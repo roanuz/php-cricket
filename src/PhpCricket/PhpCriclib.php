@@ -615,68 +615,6 @@ class PhpCriclib
 		return $response;
 	}
 
-	/**
-	 * season:
-	 * 
-	 * getSeasonMG101 function
-	 * 
-	 *The Season API gives the season details like start date,
-	 *team details, match keys, and match result for the given season.
-	 *
-	 * @param $season_key			Key of season to show the particular season schedule.		
-	 *
-	 * For more info, follow the documentation in the below URL.
-	 * @link https://www.cricketapi.com/docs/Core-API/Season-API/		
-	 */
-	function getSeasonMG101($season_key)
-	{
-		$fields = array();
-		$url = $url = 'season/' . $season_key;
-		$response = $this->getData($url, $fields);
-		return $response;
-	}
-
-	/**
-	 * Season Team:
-	 * 
-	 * getSeasonteamMG101 function
-	 * 
-	 *Gives the squad list & details for the given season
-	 *
-	 * @param $season_key			Key of season to show the particular season schedule.		
-	 * @param $season_team_key			Key of team to show the particular season schedule.
-	 * For more info, follow the documentation in the below URL.
-	 * @link https://www.cricketapi.com/docs/Core-API/Season-Team-API/		
-	 */
-	function getSeasonteamMG101($season_key, $season_team_key)
-	{
-		$fields = array();
-		$url = $url = 'season/' . $season_key . '/team' . $season_team_key;
-		$response = $this->getData($url, $fields);
-		return $response;
-	}
-
-	/**
-	 * Match:
-	 * 
-	 * getMatchMG101 function
-	 * 
-	 *The Match API gives the full details of the match like the Toss Information, Wicket, Runs, Stats, Squad, Playing XI,
-	 *Live instant match update and much more.
-	 * @param $season_key			Key of season to show the particular season schedule.		
-	 * @param $card_type			Gives the complete details of the match like match squad, match start time, date, and short description about the match. During the live match, it gives the live scores..
-	 * For more info, follow the documentation in the below URL.
-	 * @link https://www.cricketapi.com/docs/Core-API/Match-API/		
-	 */
-	function getMatchMG101($match_key, $card_type)
-	{
-		$fields = array(
-			'card_type' => $card_type
-		);
-		$url = $url = 'match/' . $match_key;
-		$response = $this->getData($url, $fields);
-		return $response;
-	}
 
 	/**
 	 * Season Stats:
