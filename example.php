@@ -1,7 +1,7 @@
 <?php 
 require_once __DIR__ . '/vendor/autoload.php'; // Autoload files using Composer autoload
 
-$phpCricket = new PhpCricket\PhpCriclib('your_access_key', 'your_secret_key', 'your_app_id', 'unique_device_id');
+$phpCricket = new PhpCricket\PhpCriclib('972838506d81e4fe544747bfe5ee9eba', '63a0dd622a5263b0751fdea6acc74389', 'Litzscore.suyatesting', 'developer');
 
 
 /**
@@ -80,10 +80,47 @@ $phpCricket = new PhpCricket\PhpCriclib('your_access_key', 'your_secret_key', 'y
 // $getNewsAgg = $phpCricket->getNewsAggregation();
 // echo json_encode($getNewsAgg);
 
-// $getMatch = $phpCricket->getCoverage();
-// $getMatch = $phpCricket->getBoardSchedule('ECC','2020-07');
-// $getMatch = $phpCricket->getSeasonScheduleMg101('European Cricket Series Kummerfeld T10','ECC','2020-07');
-// $getMatch = $phpCricket->getSeasonRecent('European Cricket Series Kummerfeld T10');
-// $getMatch = $phpCricket->getSeasonMG101('European Cricket Series Kummerfeld T10');
-// $getMatch = $phpCricket->getSeasonteam('European Cricket Series Kummerfeld T10','ECC','2020-07');
-// $getMatch = $phpCricket->getFantasyMatchPoints('c.match.alm_vs_ssd.abb60','RZ-C-A101');
+
+/* Get Coverage MG101*/
+// $getCoverage = $phpCricket->getCoverage();
+// echo json_encode($getCoverage);
+
+/* Get Board Schedule MG101*/
+// $getBoardSchedule = $phpCricket->getBoardSchedule('c.board.ecc.2f218','2020-07');
+// echo json_encode($getBoardSchedule);
+
+/* Get Season Schedule MG101 */
+// $getSeasonScheduleMg101 = $phpCricket->getSeasonScheduleMg101('c.season.ecsk.8bf7c','c.board.ecc.2f218','2020-07');
+// echo json_encode($getSeasonScheduleMg101);
+
+/* Get Season recent MG101*/
+// $getSeasonRecent = $phpCricket->getSeasonRecent('c.season.ecsk.8bf7c');
+// echo json_encode($getSeasonRecent);
+
+/* Get Season MG101 */
+// $getSeasonMG101 = $phpCricket->getSeasonMG101('c.season.ecsk.8bf7c');
+// echo json_encode($getSeasonMG101);
+
+/* Get Season Team MG101 */
+// $getSeasonteamMG101 = $phpCricket->getSeasonteamMG101('c.season.ecsg.1e82b','c.steam.ecsg_alm.6c487');
+// echo json_encode($getSeasonteamMG101);
+
+/* Get Match MG101 */
+// $getMatchMG101 = $phpCricket->getMatchMG101('c.match.jkp_vs_wzc.7e4bd','metric_101');
+// echo json_encode($getMatchMG101);
+
+/* Get Season stats MG101 */
+// $getSeasonStatsMg101 = $phpCricket->getSeasonStatsMg101('c.season.ecsg.1e82b');
+// echo json_encode($getSeasonStatsMg101);
+
+/* Get Season Player stats MG101 */
+// $getSeasonPlayerStatsMg101 = $phpCricket->getSeasonPlayerStatsMg101('c.season.ecsg.1e82b','c.player.muhammad_tanveer.993a3');
+// echo json_encode($getSeasonPlayerStatsMg101);
+
+/* Get fantasy match credit MG101 */
+// $getFantasyMatchCredit = $phpCricket->getFantasyMatchCredit('c.match.alm_vs_ssd.abb60','RZ-C-A101');
+// echo json_encode($getFantasyMatchCredit);
+
+/* Get fantasy match points MG101 */
+// $getFantasyMatchPoints = $phpCricket->getFantasyMatchPoints('c.match.alm_vs_ssd.abb60','RZ-C-A101');
+// echo json_encode($getFantasyMatchPoints);

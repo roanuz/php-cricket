@@ -714,7 +714,7 @@ class PhpCriclib
 	function getSeasonPlayerStatsMg101($season_key, $player_key)
 	{
 		$fields = array();
-		$url = $url = 'season/' . $season_key . '/player/' . $player_key;
+		$url = $url = 'season/' . $season_key . '/player/' . $player_key.'/stats';
 		$response = $this->getData($url, $fields);
 		return $response;
 	}
