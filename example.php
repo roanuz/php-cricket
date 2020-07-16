@@ -1,5 +1,4 @@
 <?php 
-
 require_once __DIR__ . '/vendor/autoload.php'; // Autoload files using Composer autoload
 
 $phpCricket = new PhpCricket\PhpCriclib('your_access_key', 'your_secret_key', 'your_app_id', 'unique_device_id');
@@ -80,3 +79,11 @@ $phpCricket = new PhpCricket\PhpCriclib('your_access_key', 'your_secret_key', 'y
 /* Get News Aggregation */
 // $getNewsAgg = $phpCricket->getNewsAggregation();
 // echo json_encode($getNewsAgg);
+
+// $getMatch = $phpCricket->getCoverage();
+// $getMatch = $phpCricket->getBoardSchedule('ECC','2020-07');
+// $getMatch = $phpCricket->getSeasonScheduleMg101('European Cricket Series Kummerfeld T10','ECC','2020-07');
+// $getMatch = $phpCricket->getSeasonRecent('European Cricket Series Kummerfeld T10');
+// $getMatch = $phpCricket->getSeasonMG101('European Cricket Series Kummerfeld T10');
+// $getMatch = $phpCricket->getSeasonteam('European Cricket Series Kummerfeld T10','ECC','2020-07');
+// $getMatch = $phpCricket->getFantasyMatchPoints('c.match.alm_vs_ssd.abb60','RZ-C-A101');
